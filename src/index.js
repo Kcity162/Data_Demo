@@ -12,11 +12,11 @@ new Handsontable(example, {
   data,
   height: 450,
   colWidths: [100, 54, 100, 100, 100, 74, 120, 145, 70, 70, 70, 100, 150],
-  colHeaders: ["Date", "DQI", "Original", "Corrected", "Proposed", "Rule ID", "Rule", "Description", "Value", "Period", "Actual", "Created", "Effective"],
-  // nestedHeaders: [
-  //   [{label: 'Group A', colspan: 2}, {label: 'B-C', colspan: 2}, 'D'],
-  //   ['E', 'F', 'G', 'H']
-  // ],
+  // colHeaders: ["Date", "DQI", "Original", "Corrected", "Proposed", "Rule ID", "Rule", "Description", "Value", "Period", "Actual", "Created", "Effective"],
+  nestedHeaders: [
+    [{label: '', colspan: 5}, {label: 'Rules Breached', colspan: 4}, {label: 'Group Name', colspan: 3}],
+    ['Date', 'DQI', 'Original', 'Corrected', 'Proposed', "Rule ID", "Rule", "Description", "Value", "Period", "Actual", "Created", "Effective" ]
+  ],
   
   columns: [
 
