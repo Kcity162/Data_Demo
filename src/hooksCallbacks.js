@@ -2,9 +2,16 @@ import Handsontable from "handsontable";
 import { ODD_ROW_CLASS } from "./constants";
 
 const headerAlignments = new Map([
+  ["1", "htCenter"],
+  ["2", "htCenter"],
+  ["3", "htCenter"],
+  ["4", "htCenter"],
+  ["5", "htCenter"],
+  ["6", "htCenter"],
+  ["7", "htCenter"],
+  ["8", "htCenter"],
   ["9", "htCenter"],
-  ["10", "htRight"],
-  ["12", "htCenter"]
+  
 ]);
 
 export function addClassesToRows(TD, row, column, prop, value, cellProperties) {

@@ -14,7 +14,7 @@ new Handsontable(example, {
   colWidths: [100, 54, 100, 100, 100, 74, 120, 145, 70, 70, 70, 100, 150],
   // colHeaders: ["Date", "DQI", "Original", "Corrected", "Proposed", "Rule ID", "Rule", "Description", "Value", "Period", "Actual", "Created", "Effective"],
   nestedHeaders: [
-    [{label: '', colspan: 5}, {label: 'Rules Breached', colspan: 4}, {label: 'Group Name', colspan: 3}],
+    [{label: '', colspan: 5}, {label: 'Rules Breached', colspan: 4}, {label: 'Group Name', colspan: 4}],
     ['Date', 'DQI', 'Original', 'Corrected', 'Proposed', "Rule ID", "Rule", "Description", "Value", "Period", "Actual", "Created", "Effective" ]
   ],
   
