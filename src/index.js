@@ -10,7 +10,7 @@ const example = document.getElementById("handsontable");
 
 new Handsontable(example, {
   data,
-  height: 450,
+  height: 670,
   colWidths: [100, 54, 100, 100, 100, 74, 125, 145, 70, 70, 70, 90, 140],
   // colHeaders: ["Date", "DQI", "Original", "Corrected", "Proposed", "Rule ID", "Rule", "Description", "Value", "Period", "Actual", "Created", "Effective"],
   nestedHeaders: [
@@ -29,15 +29,16 @@ new Handsontable(example, {
     { data: 5, type: "numeric" }, // Rule ID
     { data: 6, type: 'autocomplete',  // Rule
     source: ['DEFAULT_EXP', '9974270001021'],
-    strict: true, // if true, allows only values from the `source` array
+    strict: false, // if true, allows only values from the `source` array
     allowInvalid: false, // if false, prevents saving a value not present in the `source`
     filter: false // if true, shows only matching suggestions
   
     }, 
     { data: 7,type: 'autocomplete',  // Rule
     source: ['MIN_MWH', 'STEP_CHANGE_MWH'],
-    strict: true, // if true, allows only values from the `source` array
+    strict: false, // if true, allows only values from the `source` array
     allowInvalid: false, // if false, prevents saving a value not present in the `source`
+    filter: false // if true, shows only matching suggestions
     },
    
     { data: 8, type: "numeric" }, // Rule Value
