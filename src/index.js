@@ -11,27 +11,36 @@ const example = document.getElementById("handsontable");
 new Handsontable(example, {
   data,
   height: 450,
-  colWidths: [100, 54, 100, 100, 100, 74, 120, 145, 70, 70, 70, 100, 150],
+  colWidths: [100, 54, 100, 100, 100, 74, 125, 145, 70, 70, 70, 90, 140],
   // colHeaders: ["Date", "DQI", "Original", "Corrected", "Proposed", "Rule ID", "Rule", "Description", "Value", "Period", "Actual", "Created", "Effective"],
   nestedHeaders: [
-    [{label: '', colspan: 5}, {label: 'Rules Breached', colspan: 4}, {label: 'Group Name', colspan: 4}],
+    [{label: 'Group Name', colspan: 5}, {label: 'Rules Breached', colspan: 4}, {label: 'Group Name', colspan: 4}],
     ['Date', 'DQI', 'Original', 'Corrected', 'Proposed', "Rule ID", "Rule", "Description", "Value", "Period", "Actual", "Created", "Effective" ]
   ],
   
   columns: [
 
-    // Users rated as critical
-    { data: 0, type: "date" }, // Date
-    { data: 1, type: "text" }, // DQI
-    { data: 2, type: "text" }, // Original Read (MHw)
-    { data: 3, type: "text" }, // Corrected Read (MHw)
-    { data: 4, type: "text" }, // Proposed (MHw)
-    { data: 5, type: "text" }, // Rule ID
-    { data: 6, type: "text" }, // Rule
-    { data: 7, type: "text" }, // Rule Description
-
-    // Users reated as important
-    { data: 8, type: "text" }, // Rule Value
+   
+    { data: 0, type: "text" }, // Date
+    { data: 1, type: "text", className: 'text-center'}, // DQI
+    { data: 2, type: "numeric", className: 'text-right' }, // Original Read (MHw)
+    { data: 3, type: "numeric", className: 'text-right'  }, // Corrected Read (MHw)
+    { data: 4, type: "numeric", className: 'text-right'  }, // Proposed (MHw)
+    { data: 5, type: "numeric" }, // Rule ID
+    { data: 6, type: 'autocomplete',  // Rule
+    source: ['DEFAULT_EXP', '9974270001021'],
+    strict: true, // if true, allows only values from the `source` array
+    allowInvalid: false, // if false, prevents saving a value not present in the `source`
+    filter: false // if true, shows only matching suggestions
+  
+    }, 
+    { data: 7,type: 'autocomplete',  // Rule
+    source: ['MIN_MWH', 'STEP_CHANGE_MWH'],
+    strict: true, // if true, allows only values from the `source` array
+    allowInvalid: false, // if false, prevents saving a value not present in the `source`
+    },
+   
+    { data: 8, type: "numeric" }, // Rule Value
     { data: 9, type: "text" }, // Period
     // { data: 10, type: "text" }, // Start date
     // { data: 11, type: "text" }, // Start time

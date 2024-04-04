@@ -2,6 +2,7 @@ import Handsontable from "handsontable";
 import { ODD_ROW_CLASS } from "./constants";
 
 const headerAlignments = new Map([
+  ["0", "htCenter"],
   ["1", "htCenter"],
   ["2", "htCenter"],
   ["3", "htCenter"],
@@ -11,6 +12,15 @@ const headerAlignments = new Map([
   ["7", "htCenter"],
   ["8", "htCenter"],
   ["9", "htCenter"],
+  ["10", "htCenter"],
+  ["11", "htCenter"],
+  ["12", "htCenter"],
+  ["13", "htCenter"],
+  ["14", "htCenter"],
+  ["15", "htCenter"],
+  ["16", "htCenter"],
+  ["17", "htCenter"],
+  ["18", "htCenter"],
   
 ]);
 
