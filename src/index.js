@@ -11,7 +11,7 @@ const example = document.getElementById("handsontable");
 new Handsontable(example, {
   data,
   height: 670,
-  colWidths: [100, 54, 100, 100, 100, 74, 125, 145, 70, 70, 70, 90, 140],
+  colWidths: [100, 54, 100, 100, 100, 74, 150, 145, 70, 70, 70, 90, 140],
   // colHeaders: ["Date", "DQI", "Original", "Corrected", "Proposed", "Rule ID", "Rule", "Description", "Value", "Period", "Actual", "Created", "Effective"],
   nestedHeaders: [
     [{label: 'Group Name', colspan: 5}, {label: 'Rules Breached', colspan: 4}, {label: 'Group Name', colspan: 4}],
@@ -47,7 +47,7 @@ new Handsontable(example, {
     // { data: 11, type: "text" }, // Start time
     { data: 12, type: "text" }, // Actual
     { data: 13, type: "text" }, // Created
-    { data: 14, type: "text" }, // Effective
+    // { data: 14, type: "text" }, // Effective
     // { data: 15, type: "text" }, // weekday
   
   ],
